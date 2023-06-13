@@ -22,15 +22,15 @@ typedef struct ht {
     int size;
     h_node **contents;
 
-} *hashmap;
+} hashmap;
 
 ```
 For this hashmap, you are storing the size with the struct, so the size can be declared during `map_create(int)`. This will allow us to test 
-with a map of size 1, and a map of size 100000 (ok, maybe not that large..). 
+with a map of size 1, and a map of size 100000. 
 
 For the functions you need to implement, those are all in the hashmap.h. The "test" file is there, so you can incrementally develop, but as you
-notice there aren't any real tests in it. You will need to add tests for everything but the `map_print(hashmap)`. You will want to test the output
-on that also, but harder to write a test function. 
+notice there aren't any real tests in it. You will need to add two tests for everything but the `map_print(hashmap)`. You will want to test the output
+on that also by evaluating it (visually looking at the output..), but we will not grade the test function. 
 
 
 👉🏽 **Task**: Implement all functions in hashmap.h and add tests to [testmap.c](../testmap.c). 
@@ -38,7 +38,6 @@ on that also, but harder to write a test function.
 ## 📝 Grading Rubric
 
 
-Add (AG) and (MG) next to tiers, add major conditions to meet to pass each tier. 
 
 1. Learning (AG)
    * Tests to make sure a simple hashmap is created
@@ -62,3 +61,7 @@ Add (AG) and (MG) next to tiers, add major conditions to meet to pass each tier.
 AG - Auto-graded  
 MG - Manually graded
 
+### Submission Reminder 🚨
+For manually graded elements, we only guarantee time to submit for a regrade **IF** you submit by the **DUE DATE**. Submitting late may mean it isn't possible for the MG to be graded before the **AVAILABLE BY DATE**, removing any windows for your to resubmit in time. While it will be graded, it is always best to *submit by the due date*, so you have full opportunity to improve your grade.
+
+**Notice** This is time limitation is important for this assignment! 
