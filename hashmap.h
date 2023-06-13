@@ -21,7 +21,7 @@ typedef struct ht {
     int size;
     h_node **contents;
 
-} *hashmap;
+} hashmap;
 
 typedef unsigned long ul;
 typedef h_node **hashTable;
@@ -38,7 +38,7 @@ ul get_hash(char *str) {
 /**
  * Creates with the specified size.
 */
-hashmap map_create(int size) {
+hashmap* map_create(int size) {
    return NULL;
 }
 
@@ -46,7 +46,7 @@ hashmap map_create(int size) {
  * Gets a value from the hashmap. 
  * If a value is not found, return -1.0F
 */
-float map_get(hashmap map, char *key) {
+float map_get(hashmap* map, char *key) {
     return 0;
 }
 
@@ -54,8 +54,10 @@ float map_get(hashmap map, char *key) {
  * Removes an item from the hashmap, returning
  * the value of the item. If an item
  * is not found to remove, return -1.0F
+ * 
+ * Remember to free the key value, before free the node.
 */
-float map_del(hashmap map, char *key) {
+float map_del(hashmap* map, char *key) {
     return 0;
 }
 
@@ -63,8 +65,11 @@ float map_del(hashmap map, char *key) {
  * Stores a value into the hashmap. 
  * 1. if a key is already in the map, overwrites it with the new value
  * 2. if the key is not in the map, adds the key/value (node) pair.
+ * 
+ * For Keys, you want ot use strcpy to copy the key into the node, so that
+ * the original string passed into the function can be released.
 */
-void map_put(hashmap map, char *key, float value) {
+void map_put(hashmap* map, char *key, float value) {
     
 }
 
@@ -75,7 +80,7 @@ void map_put(hashmap map, char *key, float value) {
  * value. Refer to lab if needed. It should
  * only produce strings of .2f (two decimals). 
 */
-void map_print(hashmap map) {
+void map_print(hashmap* map) {
    
 }
 
@@ -83,7 +88,7 @@ void map_print(hashmap map) {
  * Frees the map in memory. Make sure
  * to free all the individual nodes. 
 */
-void map_free(hashmap map) {
+void map_free(hashmap* map) {
 
 }
 
