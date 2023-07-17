@@ -22,7 +22,7 @@ Did you use any external resources (you do not have to cite in class material)? 
 
 ## Questions
 
-1. Add a markdown table demonstrating the in practice time for Hashmaps. 
+1. Add a markdown table demonstrating the in practice time for Hashmaps. Look at Grokking Algorithms, and build a table looking at mathematical notation for the various functions. 
 2. What is the worst case time for a hashmap, even if rare, can you come up with a condition that always generates worst case?
 3. Looking back at the Team Activity 09, how often did you see collisions from the various data sizes? (go ahead and copy/paste the output from the activity)
 4. To make this hashmap fully usable - what are some functions missing that should be implemented? (props if you implement them!)
