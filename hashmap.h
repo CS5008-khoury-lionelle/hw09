@@ -65,6 +65,8 @@ float map_del(hashmap* map, char *key) {
  * Stores a value into the hashmap. 
  * 1. if a key is already in the map, overwrites it with the new value
  * 2. if the key is not in the map, adds the key/value (node) pair.
+ * 3. For sake of the autograder, add the keys in the order they appear (so if
+ * Apple was added and then Orange, Apple->Orange would be the order of the linked list)
  * 
  * For Keys, you want ot use strcpy to copy the key into the node, so that
  * the original string passed into the function can be released.
